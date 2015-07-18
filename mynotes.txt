@@ -1,0 +1,12 @@
+1. for ubuntu use django-admin.py startproject my_project
+instead of python django-admin.py startproject my_project
+
+2. ~/code directory is the workspace
+
+3. project configuration directory is the directory which has the same name as the project and is inside the main project folder
+
+4. deleting the folder automatically deletes the projects (delete from apache explicitely to avoid conflicts?)
+
+5. use python manage.py runserver <my machine ip>:<port> so that all devices can access it who are within the network
+
+6. 
