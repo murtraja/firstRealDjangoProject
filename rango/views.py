@@ -12,6 +12,9 @@ def index(request):
     return render_to_response('rango/index.html', context_dict, context)
 
 def about(request):
+    context = RequestContext(request)
+    context_dict = {'boldmessage':'I am the about page'}
     path = request.get_full_path()
     newpath=path.replace("about/", "")
-    return HttpResponse("Rango Says: Here is the <b>about</b> page.<br>Click <a href='"+newpath+"'>here</a> to go the previous page")
+    #return HttpResponse("Rango Says: Here is the <b>about</b> page.<br>Click <a href='"+newpath+"'>here</a> to go the previous page")
+    return render_to_response('rango/about.html', context_dict, context)
