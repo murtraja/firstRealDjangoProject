@@ -9,4 +9,6 @@ instead of python django-admin.py startproject my_project
 
 5. use python manage.py runserver <my machine ip>:<port> so that all devices can access it who are within the network
 
-6. 
+6. use null=False to disallow null values for a field
+
+7. django's auth system username = murtraja, password = mariadb

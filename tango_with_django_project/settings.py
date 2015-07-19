@@ -16,6 +16,8 @@ PROJECT_PATH = os.path.abspath(PROJECT_PATH)
 
 TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 
+DATABASE_PATH = os.path.join(PROJECT_PATH, 'rango.sql')
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -25,15 +27,21 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+DB_NAME = 'rango'
+DB_USER = 'MMR'
+DB_PASSWORD = 'mmrdb'
+DB_HOST = 'localhost'
+DB_PORT = 3306
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': DB_NAME,                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
+        'HOST': DB_HOST,                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': DB_PORT,                      # Set to empty string for default.
     }
 }
 
